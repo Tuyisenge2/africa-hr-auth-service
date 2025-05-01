@@ -26,7 +26,7 @@ public class GoogleAuthController {
     @Autowired
     private RoleService roleService;
 
-    @GetMapping("/google")
+    @GetMapping("/google/callback")
     public Map<String, Object> googleAuth(@AuthenticationPrincipal OAuth2User principal) {
         String name = principal.getAttribute("name");
         String email = principal.getAttribute("email");
